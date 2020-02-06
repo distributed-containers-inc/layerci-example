@@ -1,0 +1,13 @@
+FROM vm/ubuntu:18.04
+
+RUN echo 'this is a layerfile!'
+RUN echo 'it is a DSL made for you to be able to write efficient tests'
+RUN sleep 10
+CHECKPOINT
+
+RUN echo 'this happens after the checkpoint, we will add a file:'
+COPY thefile /thefile
+RUN cat /thefile
+CHECKPOINT
+
+RUN echo 'the checkpoint has been made! This line runs after the checkpoint.'
