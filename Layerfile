@@ -9,5 +9,7 @@ COPY . .
 RUN cat thefile
 
 RUN sleep 15
+RUN [ $(( $RANDOM % 100 )) -lt 50 ]
+RUN [ $(( $RANDOM % 100 )) -lt 50 ]
 
 RUN echo 'in total, this test takes about 45 seconds to run.'
