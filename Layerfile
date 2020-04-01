@@ -8,6 +8,9 @@ WORKDIR /app
 COPY . .
 RUN cat thefile
 
+SECRET ENV some_secret another_secret
+RUN echo "secret 1 is: $some_secret, secret 2 is: $another_secret"
+
 RUN sleep 15
 
 RUN echo 'in total, this test takes about 45 seconds to run.'
