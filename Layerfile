@@ -4,12 +4,15 @@ RUN echo 'this is a layerfile!'
 RUN echo 'it is a DSL made for you to be able to write efficient tests!'
 RUN sleep 20
 
+USER nonrootuser
+SECRET ENV some_secret another_secret
+RUN echo "secret 1 is: ${some_secret}, secret 2 is: ${another_secret}, we are $(whoami) at $(pwd), home directory contains:"
+RUN ls -al
+
+
 WORKDIR /app
 COPY . .
 RUN cat thefile
-
-SECRET ENV some_secret another_secret
-RUN echo "secret 1 is: $some_secret, secret 2 is: $another_secret"
 
 RUN sleep 15
 
