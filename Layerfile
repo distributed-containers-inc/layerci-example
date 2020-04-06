@@ -9,7 +9,7 @@ SECRET ENV some_secret another_secret
 RUN echo "secret 1 is: ${some_secret}, secret 2 is: ${another_secret}, we are $(whoami) at $(pwd), home directory contains:"
 RUN ls -al
 
-
+a
 WORKDIR /app
 COPY . .
 RUN cat thefile
