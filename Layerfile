@@ -9,4 +9,5 @@ COPY . .
 
 RUN cat thefile
 
-RUN mkdir ~/.yarn/cache/derp
+RUN mkdir -p ~/.yarn/cache/derp
+RUN mkdir -p ~/.yarn/cache/v6/npm-derp
