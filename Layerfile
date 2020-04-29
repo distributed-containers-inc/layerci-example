@@ -8,6 +8,10 @@ CACHE ~/.next/cache
 COPY . .
 
 RUN cat thefile
+RUN env
+RUN echo $CI
+RUN echo '$CI'
+RUN echo "'$CI'"
 
 RUN mkdir -p ~/.yarn/cache/derp
 RUN mkdir -p ~/.yarn/cache/v6/npm-derp
