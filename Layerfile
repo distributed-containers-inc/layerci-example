@@ -7,6 +7,8 @@ CACHE ~/.next/cache
 
 COPY . .
 
+BUTTON do you want to deploy?
+
 RUN cat thefile
 RUN env
 RUN echo $CI
