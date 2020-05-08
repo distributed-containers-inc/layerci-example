@@ -9,11 +9,7 @@ COPY . .
 
 BUTTON do you want to deploy?
 
-RUN cat thefile
-RUN env
-RUN echo $CI
-RUN echo '$CI'
-RUN echo "'$CI'"
+SNAPSHOT before-sleep
+RUN sleep 5
 
-RUN mkdir -p ~/.yarn/cache/derp
-RUN mkdir -p ~/.yarn/cache/v6/npm-derp
+RUN echo hello
