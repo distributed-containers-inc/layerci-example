@@ -8,6 +8,6 @@ CACHE ~/.next/cache
 COPY . .
 
 CHECKPOINT before-sleep
-RUN sleep 5
+RUN sleep 20
 
 RUN echo hello
