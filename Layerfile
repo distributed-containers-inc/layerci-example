@@ -9,7 +9,7 @@ COPY . .
 
 BUTTON do you want to deploy?
 
-SNAPSHOT before-sleep
+CHECKPOINT before-sleep
 RUN sleep 5
 
 RUN echo hello
