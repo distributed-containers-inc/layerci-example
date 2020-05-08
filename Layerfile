@@ -7,8 +7,6 @@ CACHE ~/.next/cache
 
 COPY . .
 
-BUTTON do you want to deploy?
-
 CHECKPOINT before-sleep
 RUN sleep 5
 
