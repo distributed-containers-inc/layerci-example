@@ -6,4 +6,4 @@ COPY . .
 CACHE ~/.cache/thefile
 RUN cat thefile || true
 
-RUN mkdir ~/.cache && cp thefile ~/.cache/
+RUN mkdir -p ~/.cache && cp thefile ~/.cache/
