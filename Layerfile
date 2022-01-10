@@ -3,7 +3,6 @@ FROM vm/ubuntu:18.04
 USER nonroot
 
 COPY . .
-CACHE ~/.cache/inner/files
-RUN cat ~/.cache/inner/files/thefile || true
-
-RUN mkdir -p ~/.cache/inner/files && cp thefile ~/.cache/inner/files/
+CACHE /root/server/.meteor/local
+RUN ls /root/server/.meteor/local || true
+RUN cd / && curl -fSsL -o- https://github.com/webappio/assets/blob/ColinChartier-patch-1/cache.tar.gz | tar xzvf
