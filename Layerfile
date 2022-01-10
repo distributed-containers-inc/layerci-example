@@ -5,4 +5,4 @@ USER nonroot
 COPY . .
 CACHE /root/server/.meteor/local
 RUN ls /root/server/.meteor/local || true
-RUN cd / && curl -fSsL -o- https://github.com/webappio/assets/blob/ColinChartier-patch-1/cache.tar.gz | tar xzvf
+RUN curl -fSsL -o- https://github.com/webappio/assets/blob/ColinChartier-patch-1/cache.tar.gz |  tar -C / -xzf /dev/stdin
