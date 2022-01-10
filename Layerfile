@@ -3,7 +3,7 @@ FROM vm/ubuntu:18.04
 USER nonroot
 
 COPY . .
-CACHE ~/.cache
-RUN cat ~/.cache/thefile || true
+CACHE ~/.cache/inner/files
+RUN cat ~/.cache/inner/files/thefile || true
 
-RUN mkdir -p ~/.cache && cp thefile ~/.cache/
+RUN mkdir -p ~/.cache/inner/files && cp thefile ~/.cache/inner/files/
