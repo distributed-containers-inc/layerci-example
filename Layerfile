@@ -4,6 +4,6 @@ USER nonroot
 
 COPY . .
 CACHE ~/.cache
-RUN cat thefile || true
+RUN cat ~/.cache/thefile || true
 
 RUN mkdir -p ~/.cache && cp thefile ~/.cache/
